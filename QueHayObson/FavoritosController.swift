@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FavoritosController : UIViewController, UITableViewDelegate, UITableViewDataSource{
+class FavoritosController : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var tvFavoritos: UITableView!
     

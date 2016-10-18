@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BaresControllerController : UIViewController, UITableViewDelegate, UITableViewDataSource{
+class BaresControllerController : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var tvBares: UITableView!
     
@@ -31,7 +31,7 @@ class BaresControllerController : UIViewController, UITableViewDelegate, UITable
         let lugar1 = Lugares(nombre: "Barezzito", horario: "Jueves a Sabado 21:00-2:00", direccion: "Sufragio Efectivo 920, Ciudad Obregon, Sonora", foto: "BBarezzitoFondo", logo: "BBarezzitoLogo", corazon: "favoritosSeleccionado", categoria: "Cat_Bares",informacion: "Club nocturno y Bar de cÛcteles", opiniones: "Muy atentos los meseros y todo el lugar agradable cool, no se me ha negado la entrada ya he ido varias veces son prejuicios de la gente o mala suerte jaja muy padre todo. Son demasiado elitistas y los meseros solo quieren sacarte dinero de mas; En ves de dar un servicio decente; En otros estados esta mucho mejor;Al menos por la noche son un ridiculos en la manera que seleccionan quien puede entrar a consumir Excelente lugar muy buen servicio y los meseros muy atentos!! Recomendado")
         
         
-        let lugar2 = Lugares(nombre: "La Taberna de Moe", horario: "Miercoles a Sabado 19:00ñ2:00", direccion: "Vicente Guerrero 310, Ciudad ObregÛn, Sonora", foto: "BLaTabernaFondo", logo: "BLaTabernaLogo", corazon: "favoritos", categoria: "Cat_Bares",informacion: "Karaoke Bar, Bar y Restaurante", opiniones: "Muy buen ambiente cuando hay karaoke Fuga para La Taberna de Moe Que empieze la fiesta , Hoy se bebe, canta y bailaaaa")
+        let lugar2 = Lugares(nombre: "La Taberna de Moe", horario: "Miercoles a Sabado 19:00ñ2:00", direccion: "Vicente Guerrero 310, Ciudad ObregÛn, Sonora", foto: "BTabernaFondo", logo: "BLaTabernaLogo", corazon: "favoritos", categoria: "Cat_Bares",informacion: "Karaoke Bar, Bar y Restaurante", opiniones: "Muy buen ambiente cuando hay karaoke Fuga para La Taberna de Moe Que empieze la fiesta , Hoy se bebe, canta y bailaaaa")
         
         
         let lugar3 = Lugares(nombre: "Pool House", horario: "Miercoles a Sabado 19:00-2:00", direccion: "Miguel Alem·n (entre 6 de Abril y Nicol·s Bravo), Cd Obregon, Sonora", foto: "BPoolHouseFondo", logo: "BPoolHouseLogo", corazon: "favoritos", categoria: "Cat_Bares",informacion: "Billar", opiniones: "Me enkanta este lugar.... siempre hay muy buen ambiente..... y las bebidas rikisimas…m uy agradable sitio pasa convivir y pasar un rato agradable con amigos, acompaÒado de buena m˙sica y ambiente. Aparte de la michelada el petroleo tmb esta muy rico!! Hay buena musica :))")

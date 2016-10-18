@@ -11,12 +11,10 @@ import UIKit
 
 class InicioController: UIViewController {
     
-
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.backgroundColor = UIColor.gray
         
         // Do any additional setup after loading the view, typically from a nib.
     }

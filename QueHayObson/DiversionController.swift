@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DiversionController : UIViewController, UITableViewDelegate, UITableViewDataSource{
+class DiversionController : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var tvDiversion: UITableView!
     

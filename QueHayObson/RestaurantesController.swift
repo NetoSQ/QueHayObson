@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class RestaurantesController : UIViewController, UITableViewDelegate, UITableViewDataSource{
+class RestaurantesController : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var tvRestaurantes: UITableView!
     
@@ -39,7 +39,7 @@ class RestaurantesController : UIViewController, UITableViewDelegate, UITableVie
         let lugar4 = Lugares(nombre: "Cali4nia Taco Spot", horario: "12:00 - 23:00", direccion: "Calle Norte (Casi Esq. con 5 de Febrero), Cd Obregon", foto: "RCaliforniaFondo", logo: "RCaliforniaLogo", corazon: "favoritos", categoria: "Cat_Restaurante",informacion: "Burritos ï $$$$ 01 644 418 0444", opiniones: "Jerry V. ï Junio 12, 2015De lo mejor que existe en Obregon, la Steak Salad o el Pad Tahi de mi favoritos")
         restaurantes.append(lugar4)
         
-        let lugar5 = Lugares(nombre:"MesÛn La ViÒa ", horario: "13:00 - 02:00", direccion: ": Licenciado Miguel Alem·n Velasco 541, Zona Nte, 85040 Cd ObregÛn, Son.", foto: "RMesonFondo", logo: "", corazon: "favoritos", categoria: "Cat_Restaurante",informacion: "", opiniones: "Joze F. ï Mayo 15Espeluznante mente bueno muy sorprendente tener en ObregÛn un restauran como este. Excelente servicio una comida espaÒola muy bueno recomendable 100% cola al vino tinto y el chamorro")
+        let lugar5 = Lugares(nombre:"Meson La Viña ", horario: "13:00 - 02:00", direccion: ": Licenciado Miguel Alem·n Velasco 541, Zona Nte, 85040 Cd ObregÛn, Son.", foto: "RMesonFondo", logo: "", corazon: "favoritos", categoria: "Cat_Restaurante",informacion: "", opiniones: "Joze F. ï Mayo 15Espeluznante mente bueno muy sorprendente tener en ObregÛn un restauran como este. Excelente servicio una comida espaÒola muy bueno recomendable 100% cola al vino tinto y el chamorro")
         restaurantes.append(lugar5)
         
         let lugar6 = Lugares(nombre: "City Salads", horario: "8:00 - 12:00", direccion: "Plaza del Sol, Jalisco 920, Real del Sol, 85019 Cd ObregÛn, Son.", foto: "RCitySaladsFondo", logo: "RCitySaladsLogo", corazon: "favoritos", categoria: "Cat_Restaurante",informacion: " - ", opiniones: "Jairo Ervey G. ï Enero 29, 2013Pide el Baguette Madrid con aderezo de cilantro !!!... No te lo vuelvo a repetir")

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CercanoController : UIViewController, UITableViewDelegate, UITableViewDataSource{
+class CercanoController : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var tvCercano: UITableView!
     
