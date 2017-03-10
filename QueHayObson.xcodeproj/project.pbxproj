@@ -327,8 +327,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DCC27981DB6AFC8009DCA08 /* Arciform.otf in Resources */,
 				1D7E387F1DB5D49D004B8B2B /* Main.storyboard in Resources */,
+				1DCC27981DB6AFC8009DCA08 /* Arciform.otf in Resources */,
 				1D6AB22A1DB129DA001AEE29 /* LaunchScreen.storyboard in Resources */,
 				1D6AB2271DB129DA001AEE29 /* Assets.xcassets in Resources */,
 			);
@@ -524,6 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5P846UEQ9V;
 				INFOPLIST_FILE = QueHayObson/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DreamTeamCo.QueHayObson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -537,6 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5P846UEQ9V;
 				INFOPLIST_FILE = QueHayObson/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DreamTeamCo.QueHayObson;
 				PRODUCT_NAME = "$(TARGET_NAME)";
