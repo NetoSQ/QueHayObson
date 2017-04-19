@@ -85,7 +85,7 @@ class BaresControllerController : UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let celda = tableView.dequeueReusableCell(withIdentifier: "CeldaBares") as! CeldaBaresController
+        let celda = tableView.dequeueReusableCell(withIdentifier: "celdaBares") as! CeldaBaresController
         
         // as con signo de interrogacion es que le aseguras que celdaAlumno puede transformarse en tipo celdaAlumnoController, estamos haciendo un casting
         

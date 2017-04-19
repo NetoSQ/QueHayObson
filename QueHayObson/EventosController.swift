@@ -8,54 +8,44 @@
 
 import Foundation
 import UIKit
+import Alamofire
+
 
 class EventosController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
     @IBOutlet var tvEventos: UITableView!
     
     
-    
-    var eventos : [Eventos] = [] // quiero una variable alumno del tipo arreglo de alumno e inicializalo y esta contenida en este viewcontroller.
-    // alumnos a su vez tiene un arreglo de materias
+    var eventos : [Eventos] = []
     
     var eventosFiltrados : [Eventos] = []
     
-    override func viewDidLoad() { // aqui pones cosas que quieres que salgan incializadas
-        
-        // aqui hay un constructor
-        // btw otra manera de hacerlo es : alumnos.append(Alumno(nombre: "José", apellidos: "Perez", matricula: "2312"... etc)
-        
-        /* codigo AAA */
-        
-        let lugar1 = Eventos(nombre: "Tributo a Mago de Oz", horario: "21:00 PM ñ 1:45 AM", costo: "", direccion: "Calle Michoac·n, 85140", hashtag: " #Viva el Rock #NoRompasMasMiPobreCorazon #Mago>Ratablanca", fondo: "EMagoFondo", logo: "EMagoLogo", corazon: "favoritos", categoria: "Cat_Eventos", informacion: "Porque uds. lo pidieron, nos vamos hacia la tierra de oz, todos °°°° todas las edades °°° no te quedes sin escuchar las mejores canciones del mago, interpretados por la sombra de oz, adem·s tributo a rata blanca por Soul of fire, y banda(s) local(es)")
-        eventos.append(lugar1)
-        
-        let lugar2 = Eventos(nombre: " Caloncho en ObregÛn", horario: "17:00 PMñ 22:00 PM", costo: "", direccion: "Arboleda de la Casa de la Casa de la Cultura, frente a la Laguna del N·inari.",  hashtag: " #TodosInvitados #ApoyemosElTalento #QueHayObsonPatrocinios", fondo: "ECalonchoFondo", logo: "ECalonchoLogo", corazon: "favoritos", categoria: "Cat_Eventos", informacion: "Concierto de pop-rock.")
-        eventos.append(lugar2)
-        
-        let lugar4 = Eventos(nombre: " Carlos Pieto y Edison Quintana en Festival de las Artes ITSON", horario: "18. octubre 2016 - 20:00", costo: "", direccion: "5 de febrero #818 Sur, 85000", hashtag: " #AbuelitosInvitados #NoSoloParaLlorones #LaVidaEsBellaConCarlosPrieto", fondo: "EReunionFondo", logo: "EReunionLogo", corazon: "favoritosSeleccionado", categoria: "Cat_Eventos", informacion: "El Instituto TecnolÛgico de Sonora a travÈs de la DirecciÛn de ExtensiÛn Universitaria y el Departamento de ExtensiÛn de la Cultura en el marco del Festival de las Artes ITSON 2016 invita a la presentaciÛn de libro y recital *** el cellista Carlos Prieto y el Pianista Edison Quintana. Evento en coordinaciÛn *** el Seminario de Cultura Mexicana, CorresponsalÌa Navojoa y la DirecciÛn de Cultura Municipal de Cajeme.")
-        eventos.append(lugar4)
-        
-        let lugar5 = Eventos(nombre: "Enanitos Verdes en ObregÛn", horario: " Desde 22. octubre 2016 - 18:00 hasta 23. octubre 2016 - 21:00", costo: "", direccion: " Francisco Eusebio Kino y Casa Blanca, 85130", hashtag: " #NoTePeinesEnLaCama #OneHitWonder #CervezaGratisPatrocinada ", fondo: "EEnanitosFondo", logo: "EEnanitosLogo", corazon: "favoritos", categoria: "Cat_Eventos", informacion: " ENANITOS VERDES , la banda Argentina m·s exitosa regresa a CD. Obregon *** Tic Tac Tour 2016 para deleitar a sus fans *** sus Èxitos y nuevos temas.")
-        eventos.append(lugar5)
+    override func viewDidLoad() {
         
         
-        
-        let lugar6 = Eventos(nombre: " Marco Antonio SolÌs en Ciudad ObregÛn ", horario: "19:00-1:00 AM", costo: "", direccion: " Francisco Eusebio Kino, San Juan Campistrano, 85134 ",  hashtag: " #ElBukiManda #TodosSomosMarcoAntonioRegil #QueSeHaga", fondo: "EMarcoFondo", logo: "EMarcoLogo", corazon: "favoritos", categoria: "Cat_Eventos", informacion: " La tan esperada fecha en la que Marco Antonio SolÌs presentar· en ObregÛn su Amor Amor Tour al fin ha sido revelada, siendo el viernes 7 de octubre cuando El Buki interpretar· sus m·s sonados Èxitos, entre los que se encuentran A Donde Vamos a Parar, El Perdedor y Si no te Hubieras Ido, entre muchos otros m·s, la Arena ITSON ser· donde presentar· este sensacional concierto.")
-        eventos.append(lugar6)
-        
-        let lugar7 = Eventos(nombre: "Anime Monster", horario: "16:00 Hasta 21:00", costo: "", direccion: " Chihuahua No. 1875 Sur Col. Campestre, 85160", hashtag: "#LlevenseSuOutfitDeInuyasha #KokoroNoUshiha #KakashiSensei4EverTeam", fondo: "EAnimeFondo", logo: "EAnimeLogo", corazon: "favoritos", categoria: "Cat_Eventos", informacion: "Este aÒo decidimos dedicarle una edicion especial al personage mas importante e incomprendido de toda historia: EL VILLANO. Asi que te invitamos a preparar ese cosplay de villano que tanto tiempo tenias *** ganas de aserlo, pero que por alguna u otra razon no lo llevaste a cabo.")
-        eventos.append(lugar7)
-        
-        let lugar8 = Eventos(nombre: " II Encuentro de Jovenes Booktubers en Cajeme", horario: " Desde 15. octubre 2016 - 15:00 Hasta 20:00", costo: "", direccion: "5 de febrero esquina con Allende, 85000", hashtag: " #FugaALeer #UnResumensito #HipstersComeHere", fondo: "ELibrosFondo", logo: "ELibrosLogo", corazon: "favoritos", categoria: "Cat_Eventos", informacion: " Evento cultural de gran calibre. expositories que nos acompañan: Nath Rodriguez Gabriela Castillo (Ciudad de Mexico) Lizeth Lopez (Hermosillo, Sonora) Jorge Andres Mendoza (Monterrey, Nuevo Leon) AndrÈs Campos (Ciudad Obregon, Sonora)")
-        eventos.append(lugar8)
-            
-            
-            
-        
-        eventosFiltrados = eventos
-        
+        /*Alamofire.request("https://quehayobson.azurewebsites.net/api/get_posts/", parameters: ["post_type" : "evento"])
+            .responseJSON {
+                response in
+                if let diccionarioRespuesta = response.result.value as? NSDictionary { // si tienes un valor que puede ser casteado como ns dictionary... continua
+                    if let arregloPosts = diccionarioRespuesta.value(forKey: "posts") as? NSArray  {
+                        
+                        for post in arregloPosts {
+                            if let diccionarioPost = post as? NSDictionary  {
+                                
+                                self.eventos.append(Eventos(diccionario: diccionarioPost, callback: self.actualizarTableViewEventos))
+                                
+                            }
+                        }
+                        self.tvEventos.reloadData()
+                    }
+                }
+        }*/
     }
+    
+    func actualizarTableViewEventos(){
+        tvEventos.reloadData()
+    }
+    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -63,13 +53,12 @@ class EventosController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventosFiltrados.count // contar de manera dinamica el numero de elementos que hay en alumnos ... que seran representados como renglones
+        return eventosFiltrados.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let celda = tableView.dequeueReusableCell(withIdentifier: "CeldaEventos") as! CeldaEventosController
-        // as con signo de interrogacion es que le aseguras que celdaAlumno puede transformarse en tipo celdaAlumnoController, estamos haciendo un casting
         
         celda.lblNombreLugar.text = eventosFiltrados[(indexPath as NSIndexPath).row].nombre
         celda.lblHorario.text = eventosFiltrados[(indexPath as NSIndexPath).row].horario
@@ -123,6 +112,7 @@ class EventosController: UIViewController, UITableViewDelegate, UITableViewDataS
         tvEventos.reloadData()
         
     }
+
     
     
 }

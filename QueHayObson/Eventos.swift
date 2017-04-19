@@ -35,6 +35,7 @@ class Eventos {
     var informacion : String?
     
     
+    
     init(nombre:String, horario: String, costo: String, direccion: String,hashtag : String, fondo: String, logo: String, corazon: String, categoria: String){
         
         self.nombre = nombre
