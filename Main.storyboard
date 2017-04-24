@@ -16,127 +16,20 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Cercano-->
-        <scene sceneID="bhA-Sl-0L9">
-            <objects>
-                <tableViewController title="Cercano" id="JJm-HK-fW8" customClass="CercanoController" customModule="QueHayObson" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="28" sectionFooterHeight="28" id="c2N-7s-PcK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaCercano" rowHeight="90" id="dQC-gY-9jg" customClass="CeldaCercanoController" customModule="QueHayObson" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dQC-gY-9jg" id="FQR-rv-ZO2">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-Wz-rhv">
-                                            <rect key="frame" x="0.0" y="-4" width="375" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OK5-7u-UpF">
-                                            <rect key="frame" x="0.0" y="-1" width="375" height="91"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f3-QA-itR">
-                                            <rect key="frame" x="101" y="0.0" width="228" height="34"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="Arciform" family="Arciform Sans" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZ2-n5-PVL">
-                                            <rect key="frame" x="101" y="26" width="129" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direccion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPe-GA-u6F">
-                                            <rect key="frame" x="101" y="43" width="222" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EstrellaBlanca" translatesAutoresizingMaskIntoConstraints="NO" id="lmF-yT-SUG">
-                                            <rect key="frame" x="162" y="60" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwW-pb-yng">
-                                            <rect key="frame" x="8" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EstrellaBlanca" translatesAutoresizingMaskIntoConstraints="NO" id="cbd-PU-nth">
-                                            <rect key="frame" x="189" y="60" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EstrellaBlanca" translatesAutoresizingMaskIntoConstraints="NO" id="NhK-ga-hRN">
-                                            <rect key="frame" x="106" y="60" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EstrellaBlanca" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-En-WYu">
-                                            <rect key="frame" x="216" y="60" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EstrellaBlanca" translatesAutoresizingMaskIntoConstraints="NO" id="I5y-gu-PO2">
-                                            <rect key="frame" x="134" y="60" width="25" height="25"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQn-No-l7K">
-                                            <rect key="frame" x="337" y="8" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JB2-al-Ahf">
-                                            <rect key="frame" x="337" y="51" width="30" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imgCategoria" destination="JB2-al-Ahf" id="xo8-zd-q7l"/>
-                                    <outlet property="imgCorazon" destination="VQn-No-l7K" id="nS9-8j-HJm"/>
-                                    <outlet property="imgFondoCelda" destination="TDJ-Wz-rhv" id="fa1-Sk-o29"/>
-                                    <outlet property="lblDireccion" destination="sPe-GA-u6F" id="Xqb-vA-yUO"/>
-                                    <outlet property="lblHorario" destination="RZ2-n5-PVL" id="bh2-ib-Z6q"/>
-                                    <outlet property="lblLogoLugar" destination="kwW-pb-yng" id="4OU-qM-eZP"/>
-                                    <outlet property="lblNombreLugar" destination="8f3-QA-itR" id="6ae-55-E2T"/>
-                                    <segue destination="uwx-tG-zJU" kind="show" identifier="goToDetalle" id="kFl-p3-SmX"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JJm-HK-fW8" id="n9U-Hz-Hf8"/>
-                            <outlet property="delegate" destination="JJm-HK-fW8" id="n4k-M0-XCr"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Lo + Cercano" id="GgA-Fw-GGL"/>
-                    <connections>
-                        <outlet property="tvCercano" destination="c2N-7s-PcK" id="Pwl-Jp-Piy"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zYq-Yi-ecR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2638" y="-1174"/>
-        </scene>
         <!--CercanoController-->
         <scene sceneID="RqS-IZ-Ssg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM9-rM-q5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController title="Cercano" id="H7N-PP-liC" userLabel="CercanoController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Cerca" image="Tabubicacion" id="JWO-Xi-PuH"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WqV-Y3-IxE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WqV-Y3-IxE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="JJm-HK-fW8" kind="relationship" relationship="rootViewController" id="CtC-mn-w53"/>
+                        <segue destination="RVE-ID-vM6" kind="relationship" relationship="rootViewController" id="JSC-9k-Eea"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gM9-rM-q5g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1649" y="-1174"/>
         </scene>
@@ -747,7 +640,7 @@
             <objects>
                 <navigationController id="ZmI-VC-9Pb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Inicio" image="Tabhome" id="wiE-BK-RUz"/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="XZw-XT-ZwI">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="XZw-XT-ZwI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -881,7 +774,7 @@
             <objects>
                 <navigationController title="FavoritosController" id="rrD-pd-o9v" userLabel="FavoritosController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favoritos" image="Tabfavoritos" id="dSI-Nz-HGP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Gan-gp-rgV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gan-gp-rgV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1706,6 +1599,124 @@
             </objects>
             <point key="canvasLocation" x="1774" y="-2015"/>
         </scene>
+        <!--Cercano-->
+        <scene sceneID="jzD-IB-iLf">
+            <objects>
+                <tableViewController id="RVE-ID-vM6" userLabel="Cercano" customClass="CercanoController" customModule="QueHayObson" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="8hd-mW-egd" userLabel="TvCernaco">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaCercano" rowHeight="90" id="nhO-lV-51D" userLabel="celdaCercano" customClass="CeldaCercanoController" customModule="QueHayObson" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nhO-lV-51D" id="o28-2O-gcr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="We0-x7-yiT">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        </imageView>
+                                        <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdJ-qh-OMD">
+                                            <rect key="frame" x="0.0" y="-1" width="375" height="90"/>
+                                            <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LY7-MZ-daZ">
+                                            <rect key="frame" x="8" y="0.0" width="90" height="89"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="r3n-7E-FVu"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Lugar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7x-3C-kJ0">
+                                            <rect key="frame" x="101" y="0.0" width="222" height="34"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tv0-dF-715">
+                                            <rect key="frame" x="101" y="26" width="129" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Direccion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSv-Yo-OSC">
+                                            <rect key="frame" x="101" y="43" width="222" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hWd-YP-QcV">
+                                            <rect key="frame" x="337" y="51" width="30" height="30"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fSZ-gv-coy">
+                                            <rect key="frame" x="337" y="8" width="30" height="30"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="QDw-M6-2YU"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="top" secondItem="fSZ-gv-coy" secondAttribute="bottom" constant="13" id="19u-G9-37H"/>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="bottom" secondItem="o28-2O-gcr" secondAttribute="bottomMargin" id="1kc-Rt-DMq"/>
+                                        <constraint firstItem="We0-x7-yiT" firstAttribute="height" secondItem="o28-2O-gcr" secondAttribute="height" id="2bA-BD-FAo"/>
+                                        <constraint firstItem="fSZ-gv-coy" firstAttribute="top" secondItem="o28-2O-gcr" secondAttribute="topMargin" id="3By-2q-qJh"/>
+                                        <constraint firstItem="LY7-MZ-daZ" firstAttribute="height" secondItem="o28-2O-gcr" secondAttribute="height" id="7Ul-rA-DVx"/>
+                                        <constraint firstItem="mSv-Yo-OSC" firstAttribute="top" secondItem="tv0-dF-715" secondAttribute="bottom" constant="-4" id="EVu-Dc-GSO"/>
+                                        <constraint firstItem="fSZ-gv-coy" firstAttribute="trailing" secondItem="o28-2O-gcr" secondAttribute="trailingMargin" id="FcJ-R7-rSk"/>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="top" secondItem="fSZ-gv-coy" secondAttribute="bottom" constant="13" id="HGV-cE-goh"/>
+                                        <constraint firstItem="LY7-MZ-daZ" firstAttribute="centerY" secondItem="o28-2O-gcr" secondAttribute="centerY" id="HYA-gn-TL2"/>
+                                        <constraint firstItem="We0-x7-yiT" firstAttribute="centerY" secondItem="o28-2O-gcr" secondAttribute="centerY" id="JDS-10-NgR"/>
+                                        <constraint firstItem="jdJ-qh-OMD" firstAttribute="centerY" secondItem="o28-2O-gcr" secondAttribute="centerY" id="PfZ-Ig-3GF"/>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="height" secondItem="fSZ-gv-coy" secondAttribute="height" id="RSD-CL-TjW"/>
+                                        <constraint firstItem="jdJ-qh-OMD" firstAttribute="height" secondItem="o28-2O-gcr" secondAttribute="height" id="StY-h9-Td8"/>
+                                        <constraint firstItem="l7x-3C-kJ0" firstAttribute="leading" secondItem="LY7-MZ-daZ" secondAttribute="trailing" constant="3" id="UOq-kx-Xco"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mSv-Yo-OSC" secondAttribute="bottom" constant="17" id="Zcm-hp-jfG"/>
+                                        <constraint firstItem="LY7-MZ-daZ" firstAttribute="leading" secondItem="o28-2O-gcr" secondAttribute="leading" constant="8" id="Zg7-dG-lB0"/>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="leading" secondItem="mSv-Yo-OSC" secondAttribute="trailing" constant="14" id="bYg-90-a68"/>
+                                        <constraint firstItem="mSv-Yo-OSC" firstAttribute="top" secondItem="l7x-3C-kJ0" secondAttribute="bottom" constant="9" id="dN7-49-Gr0"/>
+                                        <constraint firstItem="jdJ-qh-OMD" firstAttribute="centerX" secondItem="o28-2O-gcr" secondAttribute="centerX" id="dnf-ma-bb0"/>
+                                        <constraint firstItem="mSv-Yo-OSC" firstAttribute="leading" secondItem="LY7-MZ-daZ" secondAttribute="trailing" constant="3" id="gDt-tT-jb8"/>
+                                        <constraint firstItem="fSZ-gv-coy" firstAttribute="leading" secondItem="tv0-dF-715" secondAttribute="trailing" constant="107" id="gzX-XM-DAi"/>
+                                        <constraint firstItem="We0-x7-yiT" firstAttribute="width" secondItem="o28-2O-gcr" secondAttribute="width" id="kt8-BS-Zip"/>
+                                        <constraint firstItem="We0-x7-yiT" firstAttribute="centerX" secondItem="o28-2O-gcr" secondAttribute="centerX" id="lwR-aC-q3q"/>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="trailing" secondItem="o28-2O-gcr" secondAttribute="trailingMargin" id="mb6-XS-JVB"/>
+                                        <constraint firstItem="fSZ-gv-coy" firstAttribute="leading" secondItem="l7x-3C-kJ0" secondAttribute="trailing" constant="14" id="oX8-C3-WIu"/>
+                                        <constraint firstItem="jdJ-qh-OMD" firstAttribute="width" secondItem="o28-2O-gcr" secondAttribute="width" id="om7-am-LlF"/>
+                                        <constraint firstItem="tv0-dF-715" firstAttribute="leading" secondItem="LY7-MZ-daZ" secondAttribute="trailing" constant="3" id="qiu-3x-JpH"/>
+                                        <constraint firstItem="tv0-dF-715" firstAttribute="top" secondItem="l7x-3C-kJ0" secondAttribute="bottom" constant="-8" id="sXO-iq-6h8"/>
+                                        <constraint firstItem="l7x-3C-kJ0" firstAttribute="top" secondItem="o28-2O-gcr" secondAttribute="top" id="ul5-Bj-9Jq"/>
+                                        <constraint firstItem="tv0-dF-715" firstAttribute="top" secondItem="o28-2O-gcr" secondAttribute="topMargin" constant="18" id="x6K-Ic-9bt"/>
+                                        <constraint firstItem="hWd-YP-QcV" firstAttribute="width" secondItem="fSZ-gv-coy" secondAttribute="width" id="xtl-x9-2bV"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgCategoria" destination="hWd-YP-QcV" id="1iC-io-UrZ"/>
+                                    <outlet property="imgCorazon" destination="fSZ-gv-coy" id="hz1-rb-XVw"/>
+                                    <outlet property="imgFondoCelda" destination="We0-x7-yiT" id="jbC-gT-1Yw"/>
+                                    <outlet property="lblDireccion" destination="mSv-Yo-OSC" id="9Vq-X8-JRh"/>
+                                    <outlet property="lblHorario" destination="tv0-dF-715" id="WaN-lP-nYM"/>
+                                    <outlet property="lblLogoLugar" destination="LY7-MZ-daZ" id="05M-Cx-Ecx"/>
+                                    <outlet property="lblNombreLugar" destination="l7x-3C-kJ0" id="dkQ-L4-9f7"/>
+                                    <segue destination="uwx-tG-zJU" kind="show" identifier="goToDetalle" id="XdP-ad-2GX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="RVE-ID-vM6" id="eTK-wH-umB"/>
+                            <outlet property="delegate" destination="RVE-ID-vM6" id="qTG-ib-wT0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bares" id="Jm9-3e-hA7"/>
+                    <connections>
+                        <outlet property="tvCercano" destination="8hd-mW-egd" id="SrM-Ro-MGy"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdu-Dl-g99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2588" y="-1174"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Agregar" width="166" height="166"/>
@@ -1730,6 +1741,6 @@
         <image name="restaurante" width="333" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ahU-0B-jj5"/>
+        <segue reference="XdP-ad-2GX"/>
     </inferredMetricsTieBreakers>
 </document>
