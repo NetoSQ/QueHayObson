@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D19AF631EBEA8A200039AAB /* CollectionRestaurantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D19AF621EBEA8A200039AAB /* CollectionRestaurantes.swift */; };
 		1D201D531DB405F3007C6FE3 /* RestaurantesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D201D521DB405F3007C6FE3 /* RestaurantesController.swift */; };
 		1D201D551DB40B98007C6FE3 /* CeldaRestaurantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D201D541DB40B98007C6FE3 /* CeldaRestaurantes.swift */; };
 		1D6AB2201DB129D9001AEE29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6AB21F1DB129D9001AEE29 /* AppDelegate.swift */; };
@@ -16,28 +17,21 @@
 		1D6AB2351DB129DB001AEE29 /* QueHayObsonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6AB2341DB129DB001AEE29 /* QueHayObsonTests.swift */; };
 		1D6AB2401DB129DB001AEE29 /* QueHayObsonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6AB23F1DB129DB001AEE29 /* QueHayObsonUITests.swift */; };
 		1D7E387F1DB5D49D004B8B2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7E387E1DB5D49D004B8B2B /* Main.storyboard */; };
-		1D7E38811DB5D579004B8B2B /* BaresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E38801DB5D579004B8B2B /* BaresController.swift */; };
 		1D7E38831DB5E3AF004B8B2B /* CeldaDiversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E38821DB5E3AE004B8B2B /* CeldaDiversion.swift */; };
-		1D7E38851DB5E3BE004B8B2B /* DiversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E38841DB5E3BE004B8B2B /* DiversionController.swift */; };
 		1D7E38871DB5E3D3004B8B2B /* CeldaNaturaleza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E38861DB5E3D3004B8B2B /* CeldaNaturaleza.swift */; };
-		1D7E38891DB5E3E1004B8B2B /* NaturalezaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E38881DB5E3E1004B8B2B /* NaturalezaController.swift */; };
 		1D7E388B1DB5E3FA004B8B2B /* CeldaHistorico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E388A1DB5E3FA004B8B2B /* CeldaHistorico.swift */; };
-		1D7E388D1DB5E407004B8B2B /* HistoricoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7E388C1DB5E407004B8B2B /* HistoricoController.swift */; };
 		1D9B32CD1E8EDD5600E8185F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9B32C01E8EDD4000E8185F /* Alamofire.framework */; };
 		1D9B32CE1E8EDD5600E8185F /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9B32C01E8EDD4000E8185F /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1D9B32D11E8EDD5600E8185F /* Alamofire iOS Tests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 1D9B32C21E8EDD4000E8185F /* Alamofire iOS Tests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1DCC27921DB60E61009DCA08 /* CercanoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC27911DB60E61009DCA08 /* CercanoController.swift */; };
 		1DCC27941DB6698E009DCA08 /* Eventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC27931DB6698D009DCA08 /* Eventos.swift */; };
 		1DCC27961DB67139009DCA08 /* DetalleEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC27951DB67139009DCA08 /* DetalleEventos.swift */; };
 		1DCC27981DB6AFC8009DCA08 /* Arciform.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1DCC27971DB6AFC7009DCA08 /* Arciform.otf */; };
 		1DDA59331DB43ED400DF04E4 /* CeldaEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA59321DB43ED400DF04E4 /* CeldaEventos.swift */; };
-		1DDA59351DB43F2E00DF04E4 /* EventosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DDA59341DB43F2E00DF04E4 /* EventosController.swift */; };
 		1DE7C1ED1DB5D36100047421 /* CeldaBares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE7C1EC1DB5D36000047421 /* CeldaBares.swift */; };
 		1DFF4DEC1DB30C7300910D52 /* InicioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF4DEB1DB30C7300910D52 /* InicioController.swift */; };
 		1DFF4DEE1DB356D700910D52 /* CeldaFavoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF4DED1DB356D600910D52 /* CeldaFavoritos.swift */; };
 		1DFF4DF01DB35C9F00910D52 /* Lugares.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF4DEF1DB35C9F00910D52 /* Lugares.swift */; };
 		1DFF4DF51DB3618400910D52 /* CeldaCercano.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF4DF41DB3618400910D52 /* CeldaCercano.swift */; };
-		1DFF4DF91DB362F900910D52 /* FavoritosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF4DF81DB362F900910D52 /* FavoritosController.swift */; };
 		1DFF4DFB1DB36C0600910D52 /* DetalleLugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFF4DFA1DB36C0600910D52 /* DetalleLugar.swift */; };
 /* End PBXBuildFile section */
 
@@ -147,8 +141,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D19AF621EBEA8A200039AAB /* CollectionRestaurantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionRestaurantes.swift; sourceTree = "<group>"; };
 		1D201D521DB405F3007C6FE3 /* RestaurantesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantesController.swift; sourceTree = "<group>"; };
-		1D201D541DB40B98007C6FE3 /* CeldaRestaurantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaRestaurantes.swift; sourceTree = "<group>"; };
+		1D201D541DB40B98007C6FE3 /* CeldaRestaurantes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaRestaurantes.swift; path = QueHayObson/CeldaRestaurantes.swift; sourceTree = "<group>"; };
 		1D6AB21C1DB129D9001AEE29 /* QueHayObson.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueHayObson.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6AB21F1DB129D9001AEE29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D6AB2211DB129D9001AEE29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -162,26 +157,19 @@
 		1D6AB23F1DB129DB001AEE29 /* QueHayObsonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueHayObsonUITests.swift; sourceTree = "<group>"; };
 		1D6AB2411DB129DB001AEE29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D7E387E1DB5D49D004B8B2B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1D7E38801DB5D579004B8B2B /* BaresController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaresController.swift; sourceTree = "<group>"; };
-		1D7E38821DB5E3AE004B8B2B /* CeldaDiversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaDiversion.swift; sourceTree = "<group>"; };
-		1D7E38841DB5E3BE004B8B2B /* DiversionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiversionController.swift; sourceTree = "<group>"; };
-		1D7E38861DB5E3D3004B8B2B /* CeldaNaturaleza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaNaturaleza.swift; sourceTree = "<group>"; };
-		1D7E38881DB5E3E1004B8B2B /* NaturalezaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaturalezaController.swift; sourceTree = "<group>"; };
-		1D7E388A1DB5E3FA004B8B2B /* CeldaHistorico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaHistorico.swift; sourceTree = "<group>"; };
-		1D7E388C1DB5E407004B8B2B /* HistoricoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricoController.swift; sourceTree = "<group>"; };
+		1D7E38821DB5E3AE004B8B2B /* CeldaDiversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaDiversion.swift; path = QueHayObson/CeldaDiversion.swift; sourceTree = "<group>"; };
+		1D7E38861DB5E3D3004B8B2B /* CeldaNaturaleza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaNaturaleza.swift; path = QueHayObson/CeldaNaturaleza.swift; sourceTree = "<group>"; };
+		1D7E388A1DB5E3FA004B8B2B /* CeldaHistorico.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaHistorico.swift; path = QueHayObson/CeldaHistorico.swift; sourceTree = "<group>"; };
 		1D9B32B41E8EDD4000E8185F /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		1DCC27911DB60E61009DCA08 /* CercanoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CercanoController.swift; sourceTree = "<group>"; };
 		1DCC27931DB6698D009DCA08 /* Eventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eventos.swift; sourceTree = "<group>"; };
 		1DCC27951DB67139009DCA08 /* DetalleEventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleEventos.swift; sourceTree = "<group>"; };
 		1DCC27971DB6AFC7009DCA08 /* Arciform.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Arciform.otf; sourceTree = "<group>"; };
-		1DDA59321DB43ED400DF04E4 /* CeldaEventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaEventos.swift; sourceTree = "<group>"; };
-		1DDA59341DB43F2E00DF04E4 /* EventosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventosController.swift; sourceTree = "<group>"; };
-		1DE7C1EC1DB5D36000047421 /* CeldaBares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaBares.swift; sourceTree = "<group>"; };
+		1DDA59321DB43ED400DF04E4 /* CeldaEventos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaEventos.swift; path = QueHayObson/CeldaEventos.swift; sourceTree = "<group>"; };
+		1DE7C1EC1DB5D36000047421 /* CeldaBares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaBares.swift; path = QueHayObson/CeldaBares.swift; sourceTree = "<group>"; };
 		1DFF4DEB1DB30C7300910D52 /* InicioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InicioController.swift; sourceTree = "<group>"; };
-		1DFF4DED1DB356D600910D52 /* CeldaFavoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaFavoritos.swift; sourceTree = "<group>"; };
+		1DFF4DED1DB356D600910D52 /* CeldaFavoritos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaFavoritos.swift; path = QueHayObson/CeldaFavoritos.swift; sourceTree = "<group>"; };
 		1DFF4DEF1DB35C9F00910D52 /* Lugares.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Lugares.swift; path = ../Lugares.swift; sourceTree = "<group>"; };
-		1DFF4DF41DB3618400910D52 /* CeldaCercano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaCercano.swift; path = ../CeldaCercano.swift; sourceTree = "<group>"; };
-		1DFF4DF81DB362F900910D52 /* FavoritosController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritosController.swift; sourceTree = "<group>"; };
+		1DFF4DF41DB3618400910D52 /* CeldaCercano.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CeldaCercano.swift; sourceTree = "<group>"; };
 		1DFF4DFA1DB36C0600910D52 /* DetalleLugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetalleLugar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,11 +199,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D19AF581EBEA46400039AAB /* CeldaController */ = {
+			isa = PBXGroup;
+			children = (
+				1DDA59321DB43ED400DF04E4 /* CeldaEventos.swift */,
+				1DFF4DED1DB356D600910D52 /* CeldaFavoritos.swift */,
+				1DE7C1EC1DB5D36000047421 /* CeldaBares.swift */,
+				1D7E388A1DB5E3FA004B8B2B /* CeldaHistorico.swift */,
+				1D7E38821DB5E3AE004B8B2B /* CeldaDiversion.swift */,
+				1D201D541DB40B98007C6FE3 /* CeldaRestaurantes.swift */,
+				1DFF4DF41DB3618400910D52 /* CeldaCercano.swift */,
+				1D7E38861DB5E3D3004B8B2B /* CeldaNaturaleza.swift */,
+			);
+			name = CeldaController;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		1D19AF5F1EBEA48D00039AAB /* Detalle */ = {
+			isa = PBXGroup;
+			children = (
+				1DFF4DFA1DB36C0600910D52 /* DetalleLugar.swift */,
+				1DCC27951DB67139009DCA08 /* DetalleEventos.swift */,
+			);
+			name = Detalle;
+			sourceTree = "<group>";
+		};
+		1D19AF601EBEA67D00039AAB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D6AB2211DB129D9001AEE29 /* ViewController.swift */,
+				1DFF4DEB1DB30C7300910D52 /* InicioController.swift */,
+				1D201D521DB405F3007C6FE3 /* RestaurantesController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1D19AF611EBEA68C00039AAB /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				1D19AF621EBEA8A200039AAB /* CollectionRestaurantes.swift */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
 		1D6AB2131DB129D5001AEE29 = {
 			isa = PBXGroup;
 			children = (
 				1DCC27971DB6AFC7009DCA08 /* Arciform.otf */,
-				1DFF4DF11DB35D2500910D52 /* Modelos */,
 				1DFF4DF21DB35F7200910D52 /* ViewControllers */,
 				1DFF4DF31DB35FB000910D52 /* Storyboards */,
 				1D6AB21E1DB129D9001AEE29 /* QueHayObson */,
@@ -285,32 +315,16 @@
 				1DCC27931DB6698D009DCA08 /* Eventos.swift */,
 			);
 			name = Modelos;
-			path = QueHayObson;
 			sourceTree = "<group>";
 		};
 		1DFF4DF21DB35F7200910D52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1D6AB2211DB129D9001AEE29 /* ViewController.swift */,
-				1DFF4DEB1DB30C7300910D52 /* InicioController.swift */,
-				1DDA59341DB43F2E00DF04E4 /* EventosController.swift */,
-				1DCC27951DB67139009DCA08 /* DetalleEventos.swift */,
-				1DDA59321DB43ED400DF04E4 /* CeldaEventos.swift */,
-				1DFF4DF81DB362F900910D52 /* FavoritosController.swift */,
-				1DFF4DED1DB356D600910D52 /* CeldaFavoritos.swift */,
-				1DCC27911DB60E61009DCA08 /* CercanoController.swift */,
-				1DFF4DF41DB3618400910D52 /* CeldaCercano.swift */,
-				1DFF4DFA1DB36C0600910D52 /* DetalleLugar.swift */,
-				1D201D521DB405F3007C6FE3 /* RestaurantesController.swift */,
-				1D201D541DB40B98007C6FE3 /* CeldaRestaurantes.swift */,
-				1D7E38801DB5D579004B8B2B /* BaresController.swift */,
-				1DE7C1EC1DB5D36000047421 /* CeldaBares.swift */,
-				1D7E38821DB5E3AE004B8B2B /* CeldaDiversion.swift */,
-				1D7E38841DB5E3BE004B8B2B /* DiversionController.swift */,
-				1D7E38861DB5E3D3004B8B2B /* CeldaNaturaleza.swift */,
-				1D7E38881DB5E3E1004B8B2B /* NaturalezaController.swift */,
-				1D7E388A1DB5E3FA004B8B2B /* CeldaHistorico.swift */,
-				1D7E388C1DB5E407004B8B2B /* HistoricoController.swift */,
+				1DFF4DF11DB35D2500910D52 /* Modelos */,
+				1D19AF611EBEA68C00039AAB /* Collection */,
+				1D19AF601EBEA67D00039AAB /* Controllers */,
+				1D19AF5F1EBEA48D00039AAB /* Detalle */,
+				1D19AF581EBEA46400039AAB /* CeldaController */,
 			);
 			name = ViewControllers;
 			path = QueHayObson;
@@ -526,28 +540,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D201D551DB40B98007C6FE3 /* CeldaRestaurantes.swift in Sources */,
-				1DFF4DF91DB362F900910D52 /* FavoritosController.swift in Sources */,
 				1DFF4DEC1DB30C7300910D52 /* InicioController.swift in Sources */,
 				1DFF4DF01DB35C9F00910D52 /* Lugares.swift in Sources */,
-				1D7E388D1DB5E407004B8B2B /* HistoricoController.swift in Sources */,
+				1D19AF631EBEA8A200039AAB /* CollectionRestaurantes.swift in Sources */,
 				1D7E38871DB5E3D3004B8B2B /* CeldaNaturaleza.swift in Sources */,
 				1DCC27941DB6698E009DCA08 /* Eventos.swift in Sources */,
 				1D7E38831DB5E3AF004B8B2B /* CeldaDiversion.swift in Sources */,
-				1D7E38891DB5E3E1004B8B2B /* NaturalezaController.swift in Sources */,
 				1DFF4DFB1DB36C0600910D52 /* DetalleLugar.swift in Sources */,
 				1DDA59331DB43ED400DF04E4 /* CeldaEventos.swift in Sources */,
-				1DDA59351DB43F2E00DF04E4 /* EventosController.swift in Sources */,
 				1D7E388B1DB5E3FA004B8B2B /* CeldaHistorico.swift in Sources */,
-				1D7E38811DB5D579004B8B2B /* BaresController.swift in Sources */,
 				1DFF4DEE1DB356D700910D52 /* CeldaFavoritos.swift in Sources */,
 				1DE7C1ED1DB5D36100047421 /* CeldaBares.swift in Sources */,
-				1D7E38851DB5E3BE004B8B2B /* DiversionController.swift in Sources */,
 				1D201D531DB405F3007C6FE3 /* RestaurantesController.swift in Sources */,
 				1DFF4DF51DB3618400910D52 /* CeldaCercano.swift in Sources */,
 				1D6AB2221DB129D9001AEE29 /* ViewController.swift in Sources */,
 				1DCC27961DB67139009DCA08 /* DetalleEventos.swift in Sources */,
 				1D6AB2201DB129D9001AEE29 /* AppDelegate.swift in Sources */,
-				1DCC27921DB60E61009DCA08 /* CercanoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,7 @@
 //  Copyright © 2016 DreamTeamCo. All rights reserved.
 //
 
-import Foundation
+/*import Foundation
 import UIKit
 
 class DetalleLugar: UIViewController {
@@ -50,4 +50,4 @@ class DetalleLugar: UIViewController {
     }
     
     
-}
+}*/
