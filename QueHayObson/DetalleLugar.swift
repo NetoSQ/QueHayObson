@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+
 
 class DetalleLugar: UIViewController {
     
@@ -15,7 +17,6 @@ class DetalleLugar: UIViewController {
     
 
     @IBOutlet weak var imgLugar: UIImageView!
-
     @IBOutlet weak var lblHorario: UILabel!
     @IBOutlet weak var imgFondo: UIImageView!
     @IBOutlet weak var lblInformacion: UILabel!
@@ -32,6 +33,18 @@ class DetalleLugar: UIViewController {
     @IBOutlet weak var vwTelefono: UIView!
     
     override func viewDidLoad() {
+        let lugar = self.lugares
+            
+        
+            lblHorario.text = lugar?.horario1
+            lblInformacion.text = lugar?.descripcion
+            lblDireccion.text = lugar?.direccion
+            imgLugar.image = lugar?.imgFoto
+            imgDetalle.image = lugar?.imgMenu
+        
+      
+        
+        
         
         vwCalificacion.layer.masksToBounds = true
         vwCalificacion.layer.cornerRadius = 5
@@ -49,6 +62,7 @@ class DetalleLugar: UIViewController {
         vwTelefono.layer.cornerRadius = 5
         vwPadre.layer.masksToBounds = true
         vwPadre.layer.cornerRadius = 10
+        
         
         
         

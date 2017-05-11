@@ -12,7 +12,7 @@ import Alamofire
 
 class Lugares {
     
-    var id : Int?
+    var id : Int
     
     
     var nombre: String
@@ -22,6 +22,7 @@ class Lugares {
     var horario1 : String
     var descripcion : String
     var calificacion : Float
+    var calText : String
     
     
     var foto : String?
@@ -117,7 +118,7 @@ class Lugares {
         
     }*/
     
-    init(nombre:String, direccion: String, telefono : String, fecha1 : String, horario1 : String, descripcion : String, calificacion : Float, foto: String, menu: String, corazon: String, categoria: String, informacion: String, opiniones: String, restCategoria: String){
+    /*init(nombre:String, direccion: String, telefono : String, fecha1 : String, horario1 : String, descripcion : String, calificacion : Float, foto: String, menu: String, corazon: String, categoria: String, informacion: String, opiniones: String, restCategoria: String){
         
         
         self.nombre = nombre
@@ -142,7 +143,7 @@ class Lugares {
         
         self.restCategoria = restCategoria
         
-    }
+    }*/
     
     init(desdeDiccionario diccionario: NSDictionary){ // constructor
         
@@ -155,6 +156,7 @@ class Lugares {
         horario1 = ""
         descripcion = ""
         calificacion = 0
+        calText = ""
         
         if let idLugar = diccionario.value(forKey: "idRestaurant") as? Int{
             id = idLugar
@@ -181,7 +183,7 @@ class Lugares {
             }
             if let urlImagenMenu = diccionario.value(forKey: "imgMenu") as? String {
                 menu = urlImagenMenu
-                Alamofire.request("http://quehay.azurewebsites.net/\(menu)").responseData { response in
+                Alamofire.request("https://quehay.azurewebsites.net/\(urlImagenMenu)").responseData { response in
                     if let data = response.result.value {
                         let image = UIImage(data: data)
                         self.imgMenu = image
@@ -189,8 +191,7 @@ class Lugares {
                 }
             }
             if let urlImagenFoto = diccionario.value(forKey: "imgFoto") as? String {
-                foto = urlImagenFoto
-                Alamofire.request("http://quehay.azurewebsites.net/\(foto)").responseData { response in
+                Alamofire.request("https://quehay.azurewebsites.net/\(urlImagenFoto)").responseData { response in
                     if let data1 = response.result.value {
                         let image1 = UIImage(data: data1)
                         self.imgFoto = image1

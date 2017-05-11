@@ -14,5 +14,6 @@ class CeldaRestaurantesController : UITableViewCell{
     @IBOutlet weak var lblNombreLugar: UILabel!
     @IBOutlet weak var imgFondoCelda: UIImageView!
     @IBOutlet weak var imgCorazon: UIImageView!
+    @IBOutlet weak var lblCal: UILabel!
     @IBOutlet weak var vwCeldaPadre: UIView!
 }

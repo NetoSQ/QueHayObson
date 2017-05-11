@@ -44,8 +44,8 @@ class RestaurantesController : UIViewController, UITableViewDataSource, UITableV
         let ensalada3 = "ensalada Dos"
         categorias.append(ensalada3)
         
-        
-        Alamofire.request("http://quehay.azurewebsites.net/api/restaurantes.php", method: .get, parameters: nil).responseJSON { response in
+    
+        Alamofire.request("https://quehay.azurewebsites.net/api/restaurantes.php", method: .get, parameters: nil).responseJSON { response in
             if let listaLugares = response.result.value as? NSArray{
                 for lugar in listaLugares{
                     if let diccionarioLugar = lugar as? NSDictionary{
@@ -81,6 +81,8 @@ class RestaurantesController : UIViewController, UITableViewDataSource, UITableV
         let celda = tableView.dequeueReusableCell(withIdentifier: "celdaRestaurantes") as! CeldaRestaurantesController
         
         celda.lblNombreLugar.text = restaurantes[(indexPath as NSIndexPath).row].nombre
+        celda.imgFondoCelda.image = restaurantes[(indexPath as NSIndexPath).row].imgFoto
+        //celda.lblCal.text = restaurantes[(indexPath as NSIndexPath).row].calText
         
         celda.vwCeldaPadre.layer.masksToBounds = true
         celda.vwCeldaPadre.layer.cornerRadius = 10
