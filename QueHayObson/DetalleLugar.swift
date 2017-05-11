@@ -21,6 +21,7 @@ class DetalleLugar: UIViewController {
     @IBOutlet weak var lblInformacion: UILabel!
     @IBOutlet weak var lblDireccion: UILabel!
     @IBOutlet weak var imgDetalle: UIImageView!
+    @IBOutlet weak var lblTelefono: UILabel!
     
     @IBOutlet weak var vwPadre: UIView!
     @IBOutlet weak var vwCalificacion: UIView!
@@ -44,6 +45,7 @@ class DetalleLugar: UIViewController {
         self.lblDireccion.text = lugares?.direccion
         self.imgLugar.image = lugares?.imgFoto
         self.imgDetalle.image = lugares?.imgMenu
+        self.lblTelefono.text = lugares?.telefono
         
             
         

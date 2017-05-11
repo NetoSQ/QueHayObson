@@ -173,7 +173,7 @@
                                                         <rect key="frame" x="10" y="8" width="106" height="147"/>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Categoria_Historia" translatesAutoresizingMaskIntoConstraints="NO" id="auf-dY-ZSN">
-                                                        <rect key="frame" x="10" y="12.5" width="106" height="147"/>
+                                                        <rect key="frame" x="10" y="13" width="106" height="147"/>
                                                     </imageView>
                                                 </subviews>
                                                 <constraints>
@@ -671,16 +671,16 @@
                                                                 <rect key="frame" x="202" y="0.0" width="141" height="100"/>
                                                             </imageView>
                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DegradoAzulApp" translatesAutoresizingMaskIntoConstraints="NO" id="vMW-4r-jS2">
-                                                                <rect key="frame" x="0.0" y="0.5" width="343" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="343" height="100"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion/Promocional" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cRg-gf-zqC">
-                                                                <rect key="frame" x="8" y="8" width="172" height="59.5"/>
+                                                                <rect key="frame" x="8" y="8" width="172" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HP-43-LEZ">
-                                                                <rect key="frame" x="0.0" y="74.5" width="343" height="25.5"/>
+                                                                <rect key="frame" x="0.0" y="74" width="343" height="26"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_Compartir" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-c9-ckn">
                                                                         <rect key="frame" x="121" y="3" width="20" height="20"/>
@@ -803,6 +803,7 @@
                         <outlet property="lblDireccion" destination="Jzl-T3-ba0" id="1qR-xi-yKI"/>
                         <outlet property="lblHorario" destination="POs-Uc-oZC" id="IeE-Bn-c4a"/>
                         <outlet property="lblInformacion" destination="cRg-gf-zqC" id="lLo-0J-Gee"/>
+                        <outlet property="lblTelefono" destination="yKh-hQ-AOV" id="V51-BV-yaw"/>
                         <outlet property="vwCalificacion" destination="M6c-ca-mEk" id="kqj-K5-sgt"/>
                         <outlet property="vwDescripcion" destination="KU6-t6-XqI" id="usD-dz-Nk2"/>
                         <outlet property="vwDireccion" destination="BBA-tg-FVV" id="87w-64-iAF"/>
