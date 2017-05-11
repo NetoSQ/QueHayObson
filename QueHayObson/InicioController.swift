@@ -11,10 +11,14 @@ import UIKit
 
 class InicioController: UIViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor.gray
+        self.tabBarController?.tabBar.barTintColor = #colorLiteral(red: 0, green: 0.5630987287, blue: 0.6039456725, alpha: 0.8034213362)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

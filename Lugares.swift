@@ -6,33 +6,36 @@
 //  Copyright © 2016 DreamTeamCo. All rights reserved.
 //
 
-/*import Foundation
+import Foundation
 import UIKit
 import Alamofire
 
 class Lugares {
     
-    var imagenesCargadas = 0
+    var id : Int?
     
-    var imagenes : [UIImage] = []
     
     var nombre: String
-    var horario : String
     var direccion : String
-    
-   // var logo : String?
-   // var imgLogo : UIImage?
-    
-    //var foto : String?
-   // var imgFoto : UIImage?
-    
-    
-   // var corazon : String?
-   // var imgCorazon : UIImage?
+    var telefono : String
+    var fecha1 : String
+    var horario1 : String
+    var descripcion : String
+    var calificacion : Float
     
     
-   // var categoria : String?
-   // var imgCategoria : UIImage?
+    var foto : String?
+    var imgFoto : UIImage?
+    var menu : String?
+    var imgMenu : UIImage?
+    
+    
+    var corazon : String?
+    var imgCorazon : UIImage?
+    
+    
+    var categoria : String?
+    var imgCategoria : UIImage?
     
     var informacion : String?
     var opiniones : String?
@@ -41,7 +44,7 @@ class Lugares {
     
     
     
-   init(nombre:String, horario: String, direccion: String, imagenes : [UIImage]){
+   /*init(nombre:String, horario: String, direccion: String, imagenes : [UIImage]){
     
     
         self.nombre = nombre
@@ -53,7 +56,7 @@ class Lugares {
         
     }
     
-   /*  init(nombre:String, horario: String, direccion: String, foto: String, logo: String, corazon: String, categoria: String, informacion: String){
+    init(nombre:String, horario: String, direccion: String, foto: String, logo: String, corazon: String, categoria: String, informacion: String){
         
         self.nombre = nombre
         self.horario = horario
@@ -112,16 +115,21 @@ class Lugares {
         self.opiniones  = opiniones
         
         
-    }
+    }*/
     
-    init(nombre:String, horario: String, direccion: String, foto: String, logo: String, corazon: String, categoria: String, informacion: String, opiniones: String, restCategoria: String){
+    init(nombre:String, direccion: String, telefono : String, fecha1 : String, horario1 : String, descripcion : String, calificacion : Float, foto: String, menu: String, corazon: String, categoria: String, informacion: String, opiniones: String, restCategoria: String){
+        
         
         self.nombre = nombre
-        self.horario = horario
         self.direccion = direccion
+        self.telefono = telefono
+        self.fecha1 = fecha1
+        self.horario1 = horario1
+        self.descripcion = descripcion
+        self.calificacion = calificacion
         
-        self.logo = logo
-        imgLogo = UIImage(named: logo)
+        self.menu = menu
+        imgMenu = UIImage(named: menu)
         self.foto = foto
         imgFoto = UIImage(named: foto)
         self.corazon = corazon
@@ -134,73 +142,61 @@ class Lugares {
         
         self.restCategoria = restCategoria
         
-    }*/
+    }
     
-    init(desdeDiccionario diccionario: NSDictionary, callback : @escaping () -> Void){ // constructort
+    init(desdeDiccionario diccionario: NSDictionary){ // constructor
         
         
-        if let lugares = diccionario.value(forKey: "lugares") as? NSDictionary{
-            //Esto va a cambiar cuando hagan la BD
-            
-            if let nombre = lugares.value(forKey: "nombre_lugar") as? NSArray {
-                if let nombreLugar = nombre[0] as? String { // AQUI!!
-                    self.nombre = nombreLugar
-                }
-            }
-            
-            if let horario = lugares.value(forKey: "horario_lugar") as? NSArray {
-                if let horarioLugar = horario[0] as? String {
-                    self.horario = horarioLugar
-                }
-            }
-            
-            if let direccion = lugares.value(forKey: "horario_lugar") as? NSArray {
-                if let direccionLugar = direccion[0] as? String {
-                    self.direccion = direccionLugar
-                }
-            }
-            
-            if let informacion = lugares.value(forKey: "_lugar") as? NSArray {
-                if let informacionLugar = informacion[0] as? String {
-                    self.informacion = informacionLugar
-                }
-            }
-            
-            if let opiniones = lugares.value(forKey: "punto_terror") as? NSArray {
-                if let opinionesLugar = opiniones[0] as? String {
-                    self.opiniones = opinionesLugar
-                }
-            }
-            
-            if let restCategoria = lugares.value(forKey: "punto_accion") as? NSArray {
-                if let restCategoriaLugar = restCategoria[0] as? String {
-                    self.restCategoria = restCategoriaLugar
-                }
-            }
-            
-        }
+        id =  0
+        nombre = ""
+        direccion = ""
+        telefono = ""
+        fecha1 = ""
+        horario1 = ""
+        descripcion = ""
+        calificacion = 0
         
-        if let attachments = diccionario.value(forKey: "attachments") as? NSArray{
-            
-            for attachment in attachments { // la de la izq es nueva variable... la de la derecha es el attachments anterior
-                if let diccionarioAttachment = attachment as? NSDictionary {
-                    if let urlImagen = diccionarioAttachment.value(forKey: "url") as? String {
-                        Alamofire.request("https://moodiedt.azurewebsites.net\(urlImagen)").responseData { response in
-                            self.imagenesCargadas += 1
-                            if let data = response.result.value {
-                                let image = UIImage(data: data)
-                                self.imagenes.append(image!)
-                            }
-                            if self.imagenesCargadas >= 8 {
-                                callback()
-                                //Avisenle al ViewController qu ya cargué todo
-                            }
-                        }
+        if let idLugar = diccionario.value(forKey: "idRestaurant") as? Int{
+            id = idLugar
+            if let nombreLugar = diccionario.value(forKey: "nombre") as? String{
+                nombre = nombreLugar
+            }
+            if let direccionLugar = diccionario.value(forKey: "direccion") as? String{
+                direccion = direccionLugar
+            }
+            if let telefonoLugar = diccionario.value(forKey: "telefono") as? String{
+                telefono = telefonoLugar
+            }
+            if let fecha1Lugar = diccionario.value(forKey: "fecha1") as? String{
+                fecha1 = fecha1Lugar
+            }
+            if let horario1Lugar = diccionario.value(forKey: "horario1") as? String{
+                horario1 = horario1Lugar
+            }
+            if let descripcionLugar = diccionario.value(forKey: "descripcion") as? String{
+                descripcion = descripcionLugar
+            }
+            if let calificacionLugar = diccionario.value(forKey: "calificacion") as? Float{
+                calificacion = calificacionLugar
+            }
+            if let urlImagenMenu = diccionario.value(forKey: "imgMenu") as? String {
+                menu = urlImagenMenu
+                Alamofire.request("http://quehay.azurewebsites.net/\(menu)").responseData { response in
+                    if let data = response.result.value {
+                        let image = UIImage(data: data)
+                        self.imgMenu = image
+                    }
+                }
+            }
+            if let urlImagenFoto = diccionario.value(forKey: "imgFoto") as? String {
+                foto = urlImagenFoto
+                Alamofire.request("http://quehay.azurewebsites.net/\(foto)").responseData { response in
+                    if let data1 = response.result.value {
+                        let image1 = UIImage(data: data1)
+                        self.imgFoto = image1
                     }
                 }
             }
         }
-        
     }
-    
-}*/
+}

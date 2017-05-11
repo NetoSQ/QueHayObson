@@ -11,6 +11,7 @@ import UIKit
 
 class CollectionRestaurantes : UICollectionViewCell {
     @IBOutlet weak var lblCategoria: UILabel!
+    @IBOutlet weak var vwViewP: UIView!
     
     
 }

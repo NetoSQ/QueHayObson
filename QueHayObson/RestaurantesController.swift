@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-/*class RestaurantesController : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
+class RestaurantesController : UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet var tvRestaurantes: UITableView!
     
@@ -24,6 +24,7 @@ import Alamofire
     
     var restaurantesFiltrados : [Lugares] = []
     
+    
     override func viewDidLoad() { // aqui pones cosas que quieres que salgan incializadas
         
         // aqui hay un constructor
@@ -32,29 +33,38 @@ import Alamofire
         /* codigo AAA */
         
         
-        let sushi = "1"
+        let sushi = "Sushi"
         categorias.append(sushi)
-        let tacos = "2"
+        let tacos = "tacos"
         categorias.append(tacos)
-        let ensalada = "3"
+        let ensalada = "ensalada"
         categorias.append(ensalada)
+        let ensalada2 = "ensalada Uno"
+        categorias.append(ensalada2)
+        let ensalada3 = "ensalada Dos"
+        categorias.append(ensalada3)
         
-        Alamofire.request("https://quehayobson.azurewebsites.net/api/get_posts/", parameters: ["post_type" : "evento"])
-            .responseJSON {
-                response in
-                if let diccionarioRespuesta = response.result.value as? NSDictionary { // si tienes un valor que puede ser casteado como ns dictionary... continua
-                    if let arregloPosts = diccionarioRespuesta.value(forKey: "posts") as? NSArray  {
-                        
-                        for post in arregloPosts {
-                            if let diccionarioPost = post as? NSDictionary  {
-                                
-                                self.restaurantes.append(Lugares(desdeDiccionario: diccionarioPost, callback: self.actualizarTableViewRestaurantes))
-                            }
-                        }
-                        self.tvRestaurantes.reloadData()
+        
+        Alamofire.request("http://quehay.azurewebsites.net/api/restaurantes.php", method: .get, parameters: nil).responseJSON { response in
+            if let listaLugares = response.result.value as? NSArray{
+                for lugar in listaLugares{
+                    if let diccionarioLugar = lugar as? NSDictionary{
+                        self.restaurantes.append(Lugares(desdeDiccionario: diccionarioLugar))
                     }
                 }
+                self.tvRestaurantes.reloadData()
+            }
         }
+        
+        restaurantesFiltrados = restaurantes
+        
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1593368053, green: 0.6614125967, blue: 0.7377108932, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1593368053, green: 0.6614125967, blue: 0.7377108932, alpha: 1)
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        self.navigationController?.navigationBar.backItem?.backBarButtonItem?.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        
     }
   
     
@@ -63,17 +73,19 @@ import Alamofire
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurantesFiltrados.count // contar de manera dinamica el numero de elementos que hay en alumnos ... que seran representados como renglones
+        return restaurantes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let celda = tableView.dequeueReusableCell(withIdentifier: "celdaRestaurantes") as! CeldaRestaurantesController
-        // as con signo de interrogacion es que le aseguras que celdaAlumno puede transformarse en tipo celdaAlumnoController, estamos haciendo un casting
         
-        celda.lblNombreLugar.text = restaurantesFiltrados[(indexPath as NSIndexPath).row].nombre
-        celda.lblHorario.text = restaurantesFiltrados[(indexPath as NSIndexPath).row].horario
-        celda.lblDireccion.text = restaurantesFiltrados[(indexPath as NSIndexPath).row].direccion
+        celda.lblNombreLugar.text = restaurantes[(indexPath as NSIndexPath).row].nombre
+        
+        celda.vwCeldaPadre.layer.masksToBounds = true
+        celda.vwCeldaPadre.layer.cornerRadius = 10
+        
+        
         //celda.imgFondoCelda.image = restaurantesFiltrados[(indexPath as NSIndexPath).row].imgFoto
         //celda.lblLogoLugar.image = restaurantesFiltrados[(indexPath as NSIndexPath).row].imgLogo
         //celda.imgCorazon.image = restaurantesFiltrados[(indexPath as NSIndexPath).row].imgCorazon
@@ -89,17 +101,20 @@ import Alamofire
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let item = collectionView.numberOfItems(inSection: 1)
+        let item = categorias.count
         return item
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCategoria", for: indexPath) as! CollectionRestaurantes
+        let item = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCategoria", for: indexPath) as? CollectionRestaurantes
+    
+        item?.lblCategoria.text = categorias[indexPath.item]
         
+        item?.vwViewP.layer.masksToBounds = true
+        item?.vwViewP.layer.cornerRadius = 5
         
-        item.lblCategoria.text = categorias[1]
-        return item
+        return item!
         
     }
 
@@ -117,24 +132,24 @@ import Alamofire
             // lo haces para tener acceso a traves de la variable materiasController a los elementos del destino
             // que es en este caso un ViewControlle
             
-            let detalleLugarController = segue.destination as! DetalleLugar
+          //  let detalleLugarController = segue.destination as! DetalleLugar
             
             // haces un casting // ViewController = AAB
             
             // el alumno que seleccione , obten el indice,
             
-                        detalleLugarController.lugares = restaurantes[(tvRestaurantes.indexPathForSelectedRow! as NSIndexPath).row]
+         //               detalleLugarController.lugares = restaurantes[(tvRestaurantes.indexPathForSelectedRow! as NSIndexPath).row]
             
             // alumno en la posicion seleccionada de la tabla va a ser ahora igual a materiaController
         }
         
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+   /* func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
         // Obtener los alumnos que contengan un texto que se le parezca a searchText
         
-        restaurantesFiltrados = [] // inicializado
+        //restaurantesFiltrados = [] // inicializado
         
         for lugares in restaurantes {// recorre el arreglo alumnos y cada iteracion alumno tiene el valor del alumno en respectiva iteracion
             
@@ -145,11 +160,11 @@ import Alamofire
         
         self.actualizarTableViewRestaurantes()
         
-    }
+    }*/
     
     func actualizarTableViewRestaurantes(){
         tvRestaurantes.reloadData()
     }
     
     
-}*/
+}
