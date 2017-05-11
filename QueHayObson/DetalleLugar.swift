@@ -8,14 +8,13 @@
 
 import Foundation
 import UIKit
-import Alamofire
 
 
 class DetalleLugar: UIViewController {
     
     var lugares : Lugares?
+    var titulo = ""
     
-
     @IBOutlet weak var imgLugar: UIImageView!
     @IBOutlet weak var lblHorario: UILabel!
     @IBOutlet weak var imgFondo: UIImageView!
@@ -33,16 +32,22 @@ class DetalleLugar: UIViewController {
     @IBOutlet weak var vwTelefono: UIView!
     
     override func viewDidLoad() {
-        let lugar = self.lugares
+        
+        
+        
+        
+        self.navigationItem.title = lugares?.nombre
+        
+        
+        self.lblHorario.text = lugares?.horario1
+        self.lblInformacion.text = lugares?.descripcion
+        self.lblDireccion.text = lugares?.direccion
+        self.imgLugar.image = lugares?.imgFoto
+        self.imgDetalle.image = lugares?.imgMenu
+        
             
         
-            lblHorario.text = lugar?.horario1
-            lblInformacion.text = lugar?.descripcion
-            lblDireccion.text = lugar?.direccion
-            imgLugar.image = lugar?.imgFoto
-            imgDetalle.image = lugar?.imgMenu
         
-      
         
         
         

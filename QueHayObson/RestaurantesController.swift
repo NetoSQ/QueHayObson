@@ -49,7 +49,7 @@ class RestaurantesController : UIViewController, UITableViewDataSource, UITableV
             if let listaLugares = response.result.value as? NSArray{
                 for lugar in listaLugares{
                     if let diccionarioLugar = lugar as? NSDictionary{
-                        self.restaurantes.append(Lugares(desdeDiccionario: diccionarioLugar))
+                        self.restaurantes.append(Lugares(desdeDiccionario: diccionarioLugar, callback: self.actualizarTableViewRestaurantes))
                     }
                 }
                 self.tvRestaurantes.reloadData()
@@ -82,6 +82,7 @@ class RestaurantesController : UIViewController, UITableViewDataSource, UITableV
         
         celda.lblNombreLugar.text = restaurantes[(indexPath as NSIndexPath).row].nombre
         celda.imgFondoCelda.image = restaurantes[(indexPath as NSIndexPath).row].imgFoto
+        
         //celda.lblCal.text = restaurantes[(indexPath as NSIndexPath).row].calText
         
         celda.vwCeldaPadre.layer.masksToBounds = true
@@ -119,33 +120,29 @@ class RestaurantesController : UIViewController, UITableViewDataSource, UITableV
         return item!
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToDetalleLugar" {
+            
+            let viewControllerDestino =  segue.destination as! DetalleLugar
+            viewControllerDestino.lugares = restaurantes[(tvRestaurantes.indexPathForSelectedRow?.row)!]
+            
+            let backItem = UIBarButtonItem()
+            backItem.title = " "
+            navigationItem.backBarButtonItem = backItem
+            
+            
+            
+
+        }
+    }
 
     
     
     // se ejecuta despues de que des el click para que se renderee un nuevo viewController y antes de que se cree su instancia y aqui ponemos
     // lo que va a llevar la nueva instancia
     
-    // prepare for segue pretende preparar para ejecutar el segue (un cambio de ventanas)
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // que sigue se esta ejecutando? ( lo obtienes de los parametros de la funcion.. UIStoryboardsegue)
-        if segue.identifier == "goToDetalleLugar" { // en caso de que sea el sigue de materias entonces...
-            
-            // lo haces para tener acceso a traves de la variable materiasController a los elementos del destino
-            // que es en este caso un ViewControlle
-            
-          //  let detalleLugarController = segue.destination as! DetalleLugar
-            
-            // haces un casting // ViewController = AAB
-            
-            // el alumno que seleccione , obten el indice,
-            
-         //               detalleLugarController.lugares = restaurantes[(tvRestaurantes.indexPathForSelectedRow! as NSIndexPath).row]
-            
-            // alumno en la posicion seleccionada de la tabla va a ser ahora igual a materiaController
-        }
-        
-    }
     
    /* func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         

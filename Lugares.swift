@@ -145,7 +145,7 @@ class Lugares {
         
     }*/
     
-    init(desdeDiccionario diccionario: NSDictionary){ // constructor
+    init(desdeDiccionario diccionario: NSDictionary, callback: (() -> Void)?){ // constructor
         
         
         id =  0

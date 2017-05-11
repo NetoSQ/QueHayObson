@@ -813,6 +813,9 @@
                         <outlet property="vwTelefono" destination="Ydd-Ff-Ozr" id="Rs4-h2-Jlu"/>
                     </connections>
                 </viewController>
+                <navigationItem id="zL6-Q8-yoi">
+                    <barButtonItem key="backBarButtonItem" title="Back" id="TxU-vh-USf"/>
+                </navigationItem>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnZ-7j-w8u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3485.5999999999999" y="-3455.6221889055473"/>
