@@ -979,7 +979,7 @@
             <objects>
                 <navigationController title="FavoritosController" id="rrD-pd-o9v" userLabel="FavoritosController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favoritos" image="Tab_favoritos" id="dSI-Nz-HGP"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Gan-gp-rgV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gan-gp-rgV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

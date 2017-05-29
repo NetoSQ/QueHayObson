@@ -933,6 +933,7 @@
 					};
 					F8111E3D19A95C8B0040E7D1 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5P846UEQ9V;
 						LastSwiftMigration = 0800;
 					};
 					F829C6B11A7A94F100A2CD59 = {
@@ -1655,7 +1656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5P846UEQ9V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -1672,7 +1673,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5P846UEQ9V;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
